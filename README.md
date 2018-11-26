@@ -62,4 +62,17 @@ Different mvn commands for running the tests
    -Dcucumber.options="--tags   @create,@update"
 4. mvn verify -Dwebdriver.driver=chrome -Dwebdriver.chrome.driver=./drivers/chrome/mac
 ````
+## Test Scenarios
+All the scenarios are covered in src/test/resources/features(also covers manual scenarios 
+as it is a spec)
+````
+1. Regression:
+   + CreateNewComputerItem covers scenarios like create with all item types/ with only
+     required types
+   + UpdateComputerItem covers scenarios like update all item types/ create with only
+     required types then update with all optional types
+2. Smoke:
+   + Covers journey: CRUD operation
+3. Delete and Search are part of all the scenarios   
+````
 
