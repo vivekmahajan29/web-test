@@ -20,6 +20,7 @@ jobs:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
 
+
     steps:
       - checkout
 
@@ -31,6 +32,15 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
+
+      - install_chromedriver:
+      - run: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+             echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
+      - run: wget -N http://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
+      - run: unzip chromedriver_linux64.zip && rm chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/chromedriver
+      - run: apt-get update && apt-get install -y ca-certificates libgl1-mesa-dri xfonts-100dpi xfonts-75dpi \
+             xfonts-scalable xfonts-cyrillic xvfb --no-install-recommends google-chrome-stable
+      - run: apt-get clean autoclean
 
       - save_cache:
           paths:
