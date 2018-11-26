@@ -43,6 +43,6 @@ jobs:
     
     - store_artifacts:
         path: target/surefire-reports
-          destination: tr1
+        destination: tr1
     - store_test_results:
         path: target/surefire-reports
