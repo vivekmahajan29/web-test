@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Update computer item from the application into computer database" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-26T10:14:05" hostname="XFR-172548-C02V82FXHTD8" time="14.178">
-  <properties/>
-  <testcase name="Should be able to update and save computer item in computer database" classname="Update computer item from the application into computer database" time="14.178"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Nov 26, 2018 3:44:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
-</testsuite>
