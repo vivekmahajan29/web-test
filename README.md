@@ -73,6 +73,6 @@ as it is a spec)
      required types then update with all optional types
 2. Smoke:
    + Covers journey: CRUD operation
-3. Delete and Search are part of all the scenarios   
+3. Delete(including multiple duplicate records) and Search are part of all the scenarios   
 ````
 
