@@ -18,7 +18,8 @@ The project structure is shown below:
 + pages
     Representation of Application Home page and Create/Edit page
 + features
-    Define scenarios in Given/When/Then format for Create/Update Computer(Delete is covered as precondition and Read is  
+    Define scenarios in Given/When/Then format for Create/Update 
+    Computer(Delete is covered as precondition and Read is  
     covered as verification step)
 + steps
     Step definitions glued to feature scenario steps
@@ -26,6 +27,20 @@ The project structure is shown below:
     Layer of abstraction between step definition(WHAT!) and pages(HOW!)
 + ApplicationTestRunner
     CucumberWithSerenity Junit Runner
+````
+
+## Steps to run Serenity from Intellij/Eclipse
+
+For running from IDE
+````
+1. Need to copy date from browsers folder(containing chrome and firefox properties)
+   into the serenity.properties
+2. Either right click on any feature file(will need to install plugin for Cucumber)
+   and Run or Go to the ApplicationTestRunner and run
+   Can use Cucumber options: 
+   // tags= {"@create,@update"},
+   @CucumberOptions(features = "src/test/resources/features")
+   
 ````
 
 
