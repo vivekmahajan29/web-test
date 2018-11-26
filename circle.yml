@@ -38,12 +38,12 @@ jobs:
         key: v1-dependencies-{{ checksum "pom.xml" }}
 
     # run tests!
-    - run: mvn verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless;--no-sandbox;--disable-dev-shm-usage;--ignore-certificate-errors";
+    - run: mvn clean install -Dwebdriver.driver=chrome -Dchrome.switches="--headless;--no-sandbox;--disable-dev-shm-usage;--ignore-certificate-errors";
     #- run: mvn test
     
     - store_artifacts:
-        path: /target
+        path: target
         destination: prefix
 
     - store_test_results:
-        path: /target/surefire-reports
+        path: target/site/serenity
