@@ -1,3 +1,5 @@
+out/test/resources
+gradle/wrapper
 target/
 build
 .gradle
