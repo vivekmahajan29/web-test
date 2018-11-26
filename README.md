@@ -6,7 +6,7 @@ Icon below is the Circle CI(Similar to Jenkins) link which is connected to this 
 [![CircleCI](https://circleci.com/gh/vivekmahajan29/web-test.svg?style=svg)](https://circleci.com/gh/vivekmahajan29/web-test)
 
 ## Serenity BDD Cucumber JVM implementation
-Imp Note: 
+Imp Note: Serenity uses selenium2, hence, can support max. version of firefox as 46
 The project structure is shown below:
 ````
 + browsers
