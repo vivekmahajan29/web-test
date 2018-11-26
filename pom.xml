@@ -14,6 +14,11 @@
         <serenity.version>1.8.3</serenity.version>
         <serenity.cucumber.version>1.6.6</serenity.cucumber.version>
         <webdriver.driver>firefox</webdriver.driver>
+        <webdriver.firefox.driver>drivers/firefox</webdriver.firefox.driver>
+        <webdriver.chrome.driver>drivers/chrome</webdriver.chrome.driver>
+        <phantomjs.binary.path>phantomjs/firefox</phantomjs.binary.path>
+        <webdriver.ie.driver>ie/firefox</webdriver.ie.driver>
+        <webdriver.opera.driver>opera/firefox</webdriver.opera.driver>
         <assertj.version>2.1.0</assertj.version>
     </properties>
 
@@ -78,6 +83,22 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.lazerycode.selenium</groupId>
+                <artifactId>driver-binary-downloader-maven-plugin</artifactId>
+                <version>1.0.7</version>
+                <configuration>
+                    <rootStandaloneServerDirectory>${project.basedir}/src/test/resources/selenium_standalone_binaries</rootStandaloneServerDirectory>
+                    <downloadedZipFileDirectory>${project.basedir}/src/test/resources/selenium_standalone_zips</downloadedZipFileDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>selenium</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
@@ -95,6 +116,12 @@
                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                        <!--Set properties passed in by the driver binary downloader-->
+                        <phantomjs.binary.path>${phantomjs.binary.path}</phantomjs.binary.path>
+                        <webdriver.chrome.driver>${webdriver.chrome.driver}</webdriver.chrome.driver>
+                        <webdriver.ie.driver>${webdriver.ie.driver}</webdriver.ie.driver>
+                        <webdriver.opera.driver>${webdriver.opera.driver}</webdriver.opera.driver>
+                        <webdriver.firefox.driver>${webdriver.firefox.driver}</webdriver.firefox.driver>
                     </systemPropertyVariables>
                     <!--<parallel>classes</parallel>-->
                     <!--<threadCount>4</threadCount>-->
