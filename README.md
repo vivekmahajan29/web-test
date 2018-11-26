@@ -53,7 +53,7 @@ Different gradle commands for running the tests
 4. gradle clean test aggregate -Dserenity.properties=browsers/chrome.properties
    -Dcucumber.options="--tags @create,@update"
 ````
-## Steps to run Serenity using Maven
+## Steps to run Serenity using Maven(Refer pom.xml for more info)
 Different mvn commands for running the tests
 ````
 1. mvn clean verify
