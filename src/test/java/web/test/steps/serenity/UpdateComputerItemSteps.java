@@ -1,6 +1,7 @@
 package web.test.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
+import web.test.helpers.CommonUtils;
 import web.test.pages.CreateUpdateComputerItemPage;
 import web.test.pages.HomePage;
 
@@ -14,12 +15,10 @@ public class UpdateComputerItemSteps {
 
 
     @Step
-    public void shouldBeAbleToUpdateComputerItem(String computerName, Map<String,String> computerItem) {
+    public void shouldBeAbleToUpdateComputerItem(String computerName, Map<String, String> computerItem) {
         homePage.filterByComputerName(computerName);
         homePage.openComputerItem(computerName);
-        updateComputerItemPage.enterIntroducedDate(computerItem.get("Introduced date"));
-        updateComputerItemPage.enterDiscontinuedDate(computerItem.get("Discontinued date"));
-        updateComputerItemPage.selectCompany(computerItem.get("Company"));
+        computerItem.keySet().forEach(itemType -> CommonUtils.enterItemType(updateComputerItemPage, itemType, computerItem));
         updateComputerItemPage.clickCreateOrSaveThisButton();
     }
 
