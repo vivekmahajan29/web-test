@@ -27,6 +27,8 @@ The project structure is shown below:
     Layer of abstraction between step definition(WHAT!) and pages(HOW!)
 + ApplicationTestRunner
     CucumberWithSerenity Junit Runner
++ target/site/serenity
+    Test Reports
 ````
 
 ## Steps to run Serenity from Intellij/Eclipse
@@ -40,7 +42,24 @@ For running from IDE
    Can use Cucumber options: 
    // tags= {"@create,@update"},
    @CucumberOptions(features = "src/test/resources/features")
-   
 ````
 
+## Steps to run Serenity using Gradle(Refer build.gradle for more info)
+Different gradle commands for running the tests
+````
+1. gradle clean test aggregate
+2. gradle clean test aggregate -Dwebdriver.driver=firefox
+3. gradle clean test aggregate -Dserenity.properties=browsers/firefox.properties 
+4. gradle clean test aggregate -Dserenity.properties=browsers/chrome.properties
+   -Dcucumber.options="--tags @create,@update"
+````
+## Steps to run Serenity using Maven
+Different mvn commands for running the tests
+````
+1. mvn clean verify
+2. mvn clean verify -Dwebdriver.driver=chrome
+3. mvn clean verify -Dwebdriver.driver=chrome -Dproperties=browsers/chrome.properties
+   -Dcucumber.options="--tags   @create,@update"
+4. mvn verify -Dwebdriver.driver=chrome -Dwebdriver.chrome.driver=./drivers/chrome/mac
+````
 
