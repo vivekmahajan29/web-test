@@ -7,7 +7,6 @@ Icon below is the Circle CI(Similar to Jenkins) link which is connected to this 
 
 Test Report: https://34-159150086-gh.circle-artifacts.com/0/prefix/site/serenity/index.html
 
-[![Build Status](http://circleci-badges-max.herokuapp.com/img/vivekmahajan29/web-test/34?token=)](https://circleci.com/gh/vivekmahajan29/web-test/34#artifacts/containers/0)
 Imp Note: Serenity uses selenium2, hence, max.supported version of firefox is 46
 
 ## Serenity BDD Cucumber JVM implementation
