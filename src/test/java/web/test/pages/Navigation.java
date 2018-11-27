@@ -1,4 +1,4 @@
-package web.test.helpers;
+package web.test.pages;
 
 import net.thucydides.core.pages.PageObject;
 

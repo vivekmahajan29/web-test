@@ -2,7 +2,7 @@ package web.test.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import web.test.helpers.MessageType;
-import web.test.helpers.Navigation;
+import web.test.pages.Navigation;
 import web.test.pages.HomePage;
 
 import java.util.Map;
