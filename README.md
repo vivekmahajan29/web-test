@@ -14,7 +14,7 @@ The project structure is shown below:
 + browsers
     Property files for chrome and firefox
 + helpers
-    Enums and Navigation class for navigation between pages
+    Enums and Utlity Functions
 + pages
     Representation of Application Home page and Create/Edit page
 + features
