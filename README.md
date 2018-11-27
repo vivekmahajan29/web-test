@@ -5,7 +5,7 @@ Icon below is the Circle CI(Similar to Jenkins) link which is connected to this 
 
 [![CircleCI](https://circleci.com/gh/vivekmahajan29/web-test.svg?style=svg)](https://circleci.com/gh/vivekmahajan29/web-test)
 
-![CircleCI][Test Report](https://34-159150086-gh.circle-artifacts.com/0/prefix/site/serenity/index.html)
+CircleCI: [Test Report](https://34-159150086-gh.circle-artifacts.com/0/prefix/site/serenity/index.html)
 
 Imp Note: Serenity uses selenium2, hence, max.supported version of firefox is 46
 
