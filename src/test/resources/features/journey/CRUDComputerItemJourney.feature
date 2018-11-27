@@ -6,7 +6,7 @@ Feature: CRUD operation on computer item
   I want to be able to create, update, read and delete this item from computer database
 
 
-  Scenario Outline: Should be able to create new computer item in computer database
+  Scenario Outline: Should be able to perform CRUD operation on computer item
     # Pre Condition
     Given I am on application home page
 
