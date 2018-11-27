@@ -28,14 +28,14 @@ The project structure is shown below:
 + ApplicationTestRunner
     CucumberWithSerenity Junit Runner
 + target/site/serenity
-    Test Reports
+    Test Reports(view index.html)
 ````
 
 ## Steps to run Serenity from Intellij/Eclipse
 
 For running from IDE
 ````
-1. Need to copy date from browsers folder(containing chrome and firefox properties)
+1. Need to copy data from browsers folder(containing chrome and firefox properties)
    into the serenity.properties
 2. Either right click on any feature file(will need to install plugin for Cucumber)
    and Run or Go to the ApplicationTestRunner and run
